@@ -7,7 +7,8 @@ import UserView from '../views/UserView.vue'
 import ItemView from '../views/ItemView.vue'
 
 Vue.use(VueRouter);
-export const router = new VueRouter({
+export const router = new VueRouter({ 
+    mode :'history', //해쉬값을 제거한다.
     routes: [
       {
          path: '/',
