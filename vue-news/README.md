@@ -28,4 +28,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 npm install -g @vue/cli
 vue create vue-news
 npm i vue-router --save
+npm i axios --save
 ```
