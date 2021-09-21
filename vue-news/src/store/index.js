@@ -6,6 +6,11 @@ import { fetchNewsList, fetchAskList, fetchJobsList } from '../api/index.js';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
+    getters: {
+      fetchedAsk(state) {
+        return state.ask;
+      }
+   },
     state: {
       news: [],
       ask: [],
