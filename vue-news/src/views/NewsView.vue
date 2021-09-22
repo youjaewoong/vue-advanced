@@ -14,7 +14,7 @@
                 </a>
             </p>
             <small class="link-text">
-              by
+              {{ item.time_ago }} by
               <router-link class="link-text" v-bind:to="`/user/${item.user}`">{{ item.user }}</router-link>
             </small>
         </div>
