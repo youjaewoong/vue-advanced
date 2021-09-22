@@ -1,7 +1,6 @@
 <template>
   <div>
     <section>
-      <!-- 질문 상세 정보-->
       <div class="user-contationer">
         <div>
           <i class="fas fa-user"></i>
