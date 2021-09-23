@@ -13,20 +13,24 @@ export const router = new VueRouter({
       {
          path: '/',
          redirect: '/news',
+         name: 'news'
        },
       {
        // path: url 주소
         path: '/news',
         // component: url 주소로 갔을 때 표시될 컴포넌트
         component: NewsView,
+        name: 'news'
       },
       {
         path: '/ask',
         component: AskView,
+        name: 'ask'
       },
       {
         path: '/jobs',
         component: JobsView,
+        name: 'jobs'
       },
       {
         path: '/user/:name',
