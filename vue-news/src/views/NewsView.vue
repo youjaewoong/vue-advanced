@@ -9,6 +9,5 @@ export default {
   components: { ListItem }
 }
 </script>
-
-<style>
+<style scope>
 </style>
