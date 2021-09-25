@@ -1,22 +1,22 @@
 <template>
-  <div>
-    <section>
-      <div class="user-contationer">
-        <div>
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="user-description">
-          <div> {{ info.id }}</div>
-          <!-- <router-link :to="`/user/${fetchedItem.user}`"> 
-            {{ fetchedItem.user }}
-          </router-link>-->
-          <div class="time">
-             {{ info.created }}
-          </div> 
-        </div>
+    <div class="user-contationer">
+      <div>
+        <i class="fas fa-user"></i>
       </div>
-    </section>
-  </div>
+      <div class="user-description">
+        <slot name="username">
+          <!-- 상위 컴포넌트에서 정의할 영역 -->
+        </slot>
+        <div class="time">
+          <slot name="time">
+            <!-- 상위 컴포넌트에서 정의할 영역 -->
+          </slot>
+        </div> 
+        <slot name="karma">
+          <!-- 상위 컴포넌트에서 정의할 영역 -->
+        </slot>
+      </div>
+    </div>
 </template>
 <script>
 export default {
