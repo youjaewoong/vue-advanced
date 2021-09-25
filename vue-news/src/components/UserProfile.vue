@@ -1,0 +1,48 @@
+<template>
+  <div>
+    <section>
+      <div class="user-contationer">
+        <div>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="user-description">
+          <div> {{ info.id }}</div>
+          <!-- <router-link :to="`/user/${fetchedItem.user}`"> 
+            {{ fetchedItem.user }}
+          </router-link>-->
+          <div class="time">
+             {{ info.created }}
+          </div> 
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    info: Object
+  },
+  computed: {
+    userInfo() {
+      return this.$store.state.user;
+    }
+  },
+}
+</script>
+<style scoped>
+.user-contationer {
+  display : flex;
+  align-items: center;
+  padding:0.5rem;
+}
+.fa-user {
+  font-size: 2.5rem;
+}
+.user-description{
+  padding-left: 8px;
+}
+.time{
+  font-size: 0.7rem;
+}
+</style>
