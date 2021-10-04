@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="loginUser">login</button>
+    <button @click="loginUser1">login</button>
     <h1>List</h1>
     <ul>
       <li v-for="item in items" v-bind:key="item.id">{{ item }} </li>
@@ -21,7 +21,7 @@ export default {
       axios.get('https://jsonplaceholder.typicode.com/users/1')
         .then(response => {
           if(response.data.id === 1){
-            console.log("사용자가 인증되었습니다.");
+            console.log("사용자가 인증되었습니다 promise.");
             axios.get('https://jsonplaceholder.typicode.com/todos')
               .then(response => {
                 this.items = response.data;
@@ -30,6 +30,14 @@ export default {
         })
         .catch(error => console.log(error));
     },
+    async loginUser1(){
+      var response = await axios.get('https://jsonplaceholder.typicode.com/users/1');
+      if(response.data.id === 1){
+        console.log("사용자가 인증되었습니다. async");
+        var list = await axios.get('https://jsonplaceholder.typicode.com/todos')
+        this.items = list.data;
+      }
+    }
   },
 }
 </script>
