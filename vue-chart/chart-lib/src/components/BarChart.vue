@@ -1,13 +1,12 @@
 <template>
-    <canvas id="barChart" w  idth="400" height="400"></canvas>
+    <canvas ref="barChart" id="barChart" width="400" height="400"></canvas>
 </template>
 
 <script>
 import Chart from 'chart.js';
 export default {
     mounted() {
-    const ctx = document.getElementById('barChart');
-    new Chart(ctx, {
+    new Chart(this.$refs.barChart, {
         type: 'bar',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
