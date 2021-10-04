@@ -3,10 +3,9 @@
 </template>
 
 <script>
-import Chart from 'chart.js';
 export default {
     mounted() {
-    new Chart(this.$refs.barChart, {
+    new this.$_Chart(this.$refs.barChart, {
         type: 'bar',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
