@@ -1,14 +1,13 @@
 <template>
-    <canvas id="myChart" w  idth="400" height="400"></canvas>
+    <canvas id="barChart" w  idth="400" height="400"></canvas>
 </template>
 
 <script>
 import Chart from 'chart.js';
 export default {
     mounted() {
-    var ctx = document.getElementById('myChart');
-    
-    var myChart = new Chart(ctx, { //eslint-disable-line no-unused-vars
+    const ctx = document.getElementById('barChart');
+    new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
