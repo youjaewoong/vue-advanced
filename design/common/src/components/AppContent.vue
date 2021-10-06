@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in items">
+      <li v-for="item in items" v-bind:key="item.type">
         {{ item }}
       </li>
     </ul>
