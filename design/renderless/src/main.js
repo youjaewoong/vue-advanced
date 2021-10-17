@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 import Vue from 'vue'
 import App from './App.vue'
 
