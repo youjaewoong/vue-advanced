@@ -28,6 +28,7 @@ export default {
     }
   },
   created(){
+    console.log(process.env.VUE_APP_TITLE);
     bus.$on('start:spinner', this.staringSpinner);
     bus.$on('end:spinner', this.endSpinner);
   },
